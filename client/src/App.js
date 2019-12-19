@@ -2,6 +2,8 @@ import React from 'react'
 
 import axios from 'axios'
 import PlayerCard from './Components/PlayerCard'
+import Header from './Components/Header'
+
 
 import './App.css'
 
@@ -35,11 +37,7 @@ class App extends React.Component {
 
     return (
       <div className='App'>
-        <div className='header'>
-          <h1>Women's World Cup Players 2019</h1>
-          <h2>WorldWide Ranking by Google Search Interest</h2>
-          <p>For the period of June 2019 - July 2019</p>
-        </div>
+        <Header />
         <div className='body'>
           {this.state.players.map(player => {
             return (
@@ -52,6 +50,21 @@ class App extends React.Component {
             )
           })}
         </div>
+        <section className='footer'>
+          <p>
+            <a href='https://iconscout.com/icon/soccer-8' target='_blank'>
+              Soccer Icon
+            </a>
+          </p>
+          <p>by</p>
+          <p>
+            <a href='https://iconscout.com/contributors/aomam'>AomAm .</a>
+          </p>
+          <p>on</p>
+          <p>
+            <a href='https://iconscout.com'>Iconscout</a>
+          </p>
+        </section>
       </div>
     )
   }
