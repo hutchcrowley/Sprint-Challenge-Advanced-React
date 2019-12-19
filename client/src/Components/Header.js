@@ -11,16 +11,12 @@ const Header = () => {
 
   return (
     <div className='header'>
+    <h1>Toggle Dark Mode:</h1>
       <div className='dark-mode__toggle'>
         <div
           onClick={toggleMode}
           className={enable ? 'toggle toggled' : 'toggle'}
         />
-      </div>
-      <div>
-        <h1>Women's World Cup Players 2019</h1>
-        <h2>WorldWide Ranking by Google Search Interest</h2>
-        <p>For the period of June 2019 - July 2019</p>
       </div>
     </div>
   )

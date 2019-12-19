@@ -4,7 +4,6 @@ import axios from 'axios'
 import PlayerCard from './Components/PlayerCard'
 import Header from './Components/Header'
 
-
 import './App.css'
 
 class App extends React.Component {
@@ -36,9 +35,14 @@ class App extends React.Component {
     )
 
     return (
-      <div className='App'>
+      <container className='App'>
         <Header />
-        <div className='body'>
+        <div className='text-block'>
+          <h1>Women's World Cup Players 2019</h1>
+          <h2>WorldWide Ranking by Google Search Interest</h2>
+          <p>For the period of June 2019 - July 2019</p>
+        </div>
+        <section className='body'>
           {this.state.players.map(player => {
             return (
               <PlayerCard
@@ -49,7 +53,7 @@ class App extends React.Component {
               />
             )
           })}
-        </div>
+        </section>
         <section className='footer'>
           <p>
             <a href='https://iconscout.com/icon/soccer-8' target='_blank'>
@@ -65,7 +69,7 @@ class App extends React.Component {
             <a href='https://iconscout.com'>Iconscout</a>
           </p>
         </section>
-      </div>
+      </container>
     )
   }
 }
