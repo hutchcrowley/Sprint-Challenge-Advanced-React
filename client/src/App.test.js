@@ -1,11 +1,13 @@
 import React from 'react';
-import * as rtl from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/react'
+import { render } from "@testing-library/jest-dom"
+import App from './App'
 
-afterEach(rtl.cleanup);
 
-it('renders without crashing', () => {
-  const wrapper = rtl.render(<span className='greet'>hello world</span>
-  );
-  console.log(wrapper.debug())
-});
+describe('App module', () => {
+  it('renders without crashing', () => {
+    const appRender = render(<App />);
+    const WWW = appRender.getByText(/Women's World Cup/i);
+
+  });
+})
